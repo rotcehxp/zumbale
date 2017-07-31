@@ -1,0 +1,232 @@
+#splash_background{
+  position: absolute;
+  background: #F6FAFF;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+#splash_title{
+  color:#4A4A4A;
+  text-align:center;
+  font-size:40px;
+  margin:0 auto;
+  display:block;
+  font-family: "Open Sans";
+}
+
+#splash_subtitle{
+  color:#4A4A4A;
+  text-align:center;
+  font-size:20fhpx;
+  margin:0 auto;
+  display:block;
+  font-family: "Open Sans";
+  padding-bottom: 20px;
+}
+
+#splash_fb_button{
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  outline: 0;
+  background: #4A90E2;
+  width: 320px;
+  border: 0;
+  margin: 20px auto;
+  padding: 20px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+#splash_footer{
+  color: black;
+  font-size: 11px;
+  font-family: "Open Sans";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+#splash_fireandice_icon{
+  padding-top: 140px;
+  width: 50px;
+  margin: 0 auto;
+}
+
+
+#splash_img {
+    display: inline-block;
+    text-align: center;
+    width:50px; /* you can use % */
+    height: auto;
+}
+
+#main_page{
+	top:0;
+}
+
+html,body{
+	height: 100%
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+}
+#header{
+	display: block;
+	padding: 15px;
+	top: 0;
+	width: 100%;
+	background: #0288D1;
+	min-width: 900px;
+	height: 40px;
+}
+
+h2{
+	margin: 0 3%; 
+	display: inline-block;
+	float: left;
+	font-size: 30px;
+	font-family: "Open Sans";
+	color: #FFCA2A;
+}
+
+#header_leftside{
+	display: inline-block;
+	float: right;
+	width: 50%;
+	position: relative;
+
+}
+
+#header input{
+	display: block;
+	padding: 0;
+	border: 0;
+	margin-right: 10%;
+	height: 30px;
+	width: 92%;
+}
+
+#logout_button{
+	margin-top: 5px;
+	margin-right: 10%;
+	float: right;
+	font-size: 12px;
+	display: block;
+	color: white;
+	font-family: "Open Sans";
+	cursor: pointer;
+}
+
+
+#left_sidebar{
+	display: block;
+	background: #C3C3C3;
+	width: 20%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Open Sans";
+	min-width: 250px;
+}
+
+p{
+	margin: 0;
+	color: #4A4A4A;
+	font-size: 14px;
+}
+
+#username{
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	top: 35px;
+}
+
+#profile_picture{
+	position: relative;
+	top: 50px;
+	display: block;
+	width: 120px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#score{
+	padding: 0 40%;
+	position: relative;
+	top: 75px;
+}
+
+#following{
+	text-align: center;
+	position: relative;
+	display: block;
+	top:145px;
+}
+
+
+
+
+#following_profile_pictures_table{
+	position: relative;
+	display: block;
+	top: 10px;
+	
+}
+
+.following_profile_picture{
+	display: inline-block;
+	width: 50px;
+	height: auto;
+	padding:5px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+
+    position: relative;
+    left: 10px;
+    position:0 0;
+    height: 100px;
+    width:400px;
+    font-size: 15px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+
+    position: relative;
+    left: 10px;
+    position:0 0;
+    height: 100px;
+    width:400px;
+    font-size: 15px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+    position: relative;
+    left: 10px;
+    position:0 0;
+    height: 100px;
+    width:400px;
+    font-size: 15px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+
+    position: relative;
+    left: 10px;
+    position:0 0;
+    height: 100px;
+    width:400px;
+    font-size: 15px;
+}

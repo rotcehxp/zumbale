@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+
+	<body>
+
+		<!--- Splash Login Screen ---->
+		<div id="splash_background">
+			<div id="splash_fireandice_icon"><img id="splash_img" src="img/fireandice.gif"></div>
+			<div id="splash_title">¡Zúmbate!</div>
+			<div id="splash_subtitle">¿Eres fuego o hielo?</div>
+	 		<button id="splash_fb_button">Inicia sesión con Facebook</button>
+	 		<div id="splash_footer">Una aplicación hecha por @rotcehxp. @2017</div>
+	 	</div>
+
+
+	 	<!--- Main Page ---->
+	 	<div id="main_page">
+
+	 		<!--- Header ---->
+			<div id="header">
+				<h2>¡Zúmbate!</h2>
+				<div id="header_leftside">
+					<input type="text" id="input_search_wall" placeholder="buscar otro canal">
+					<a id="logout_button">Cerrar sesión</a>
+				</div>
+			</div>
+
+			<!--- Left side bar ---->
+			<div id="left_sidebar">
+				<p id="username">User name</p>
+				<div id="profile_picture_space">
+					<img id="profile_picture" src="img/profile_picture_template.png">
+				</div>
+				<div id="score">
+					<p id="seguidores">seguidores</p>
+					<p id="frios">fríos</p>
+					<p id="fuegos">fuegos</p>
+				</div>
+				<div id="following">
+					<p>Siguiendo a...</p>
+					<div id="following_profile_pictures_table">
+						<div class="following_profile_pictures_row">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+						</div>
+						<div class="following_profile_pictures_row">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+						</div>
+						<div class="following_profile_pictures_row">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+							<img class="following_profile_picture" src="img/profile_picture_template.png">
+						</div>
+
+					</div>
+				</div> 
+			</div>
+
+			<!--- User messages wall ---->
+			<div id="user_wall"></div>
+
+			<!--- Right side bar ---->
+			<div id="right_sidebar"></div>
+
+			<!--- Footer ---->
+			<div id="footer"></div>
+
+		</div>
+
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+	<script src="https://cdn.firebase.com/js/simple-login/1.6.4/firebase-simple-login.js"></script>
+	<script src="js/init.js" type="text/javascript" language="javascript"></script>
+	<script src="js/index.js" type="text/javascript" language="javascript"></script>
+
+
+</html>

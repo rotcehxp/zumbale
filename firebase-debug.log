@@ -1,0 +1,36 @@
+[debug] [2017-07-31T02:44:55.815Z] ----------------------------------------------------------------------
+[debug] [2017-07-31T02:44:55.817Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-07-31T02:44:55.817Z] CLI Version:  3.9.1
+[debug] [2017-07-31T02:44:55.817Z] Platform:     darwin
+[debug] [2017-07-31T02:44:55.818Z] Node Version: v6.10.3
+[debug] [2017-07-31T02:44:55.818Z] Time:         Sun Jul 30 2017 22:44:55 GMT-0400 (AST)
+[debug] [2017-07-31T02:44:55.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-31T02:44:55.830Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-31T02:44:55.830Z] > authorizing via signed-in user
+[debug] [2017-07-31T02:44:55.831Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-07-31T02:44:55.832Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/onUnvPWSijRkU_JF3tYBVO8P0e3v5lUYuJqL0wlDPoI',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jul 30 2017 22:44:55 GMT-0400 (AST)
+[debug] [2017-07-31T02:44:56.324Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-31T02:44:56.327Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/zumbate-10711  
+ Sun Jul 30 2017 22:44:56 GMT-0400 (AST)
+[debug] [2017-07-31T02:44:58.575Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-31T02:44:58.576Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/zumbate-10711/tokens  
+ Sun Jul 30 2017 22:44:58 GMT-0400 (AST)
+[debug] [2017-07-31T02:45:00.415Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/rotcehxp/Development/Firebase_projects/Zumbate'...
+[info] 
+[debug] [2017-07-31T02:45:00.418Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/zumbate-10711  
+ Sun Jul 30 2017 22:45:00 GMT-0400 (AST)
+[debug] [2017-07-31T02:45:01.003Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-31T02:45:01.004Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/154172715894/clients/_:getWebAppConfig  
+ Sun Jul 30 2017 22:45:01 GMT-0400 (AST)
+[debug] [2017-07-31T02:45:01.743Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
