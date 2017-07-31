@@ -7,29 +7,40 @@
 
 	<body>
 
-		<!--- Splash Login Screen ---->
-		<div id="splash_background">
-			<div id="splash_fireandice_icon"><img id="splash_img" src="img/fireandice.gif"></div>
-			<div id="splash_title">¡Zúmbate!</div>
-			<div id="splash_subtitle">¿Eres fuego o hielo?</div>
-	 		<button id="splash_fb_button">Inicia sesión con Facebook</button>
-	 		<div id="splash_footer">Una aplicación hecha por @rotcehxp. @2017</div>
+		<!--- Splash Login Screen -->
+		<div id="splash_login" class="splash_background">
+			<div class="splash_fireandice_icon"><img class="splash_img" src="img/fireandice.gif"></div>
+			<div class="splash_title">¡Zúmbate!</div>
+			<div class="splash_subtitle">¿Eres fuego o hielo?</div>
+	 		<button class="splash_fb_button" id="splash_fb_button">Inicia sesión con Facebook</button>
+	 		<div class="splash_footer">Una aplicación hecha por @rotcehxp. @2017</div>
+	 	</div>
+
+	 	<!--- Splash Request Wall URL Screen -->
+		<div id="splash_request_wall_url" class="splash_background">
+			<div class="splash_fireandice_icon"><img class="splash_img" src="img/fireandice.gif"></div>
+			<div class="splash_title">¡Zúmbate!</div>
+			<div class="splash_subtitle">Crea una dirección para que tus <br>amigos puedan conseguir tu muro.<br>Sé creativo.</div>
+			<div class="splash_error_message" id="splash_error_message"></div>
+	 		<input type="text" id="splash_input_create_wall_url" placeholder="tumbalacasamami">
+	 		<button class="splash_send_button" id="splash_send_button">Enviar</button>
+	 		<div class="splash_footer">Una aplicación hecha por @rotcehxp. @2017</div>
 	 	</div>
 
 
-	 	<!--- Main Page ---->
+	 	<!--- Main Page -->
 	 	<div id="main_page">
 
-	 		<!--- Header ---->
+	 		<!--- Header -->
 			<div id="header">
-				<h2>¡Zúmbate!</h2>
+				<div id="header_title">¡Zúmbate!</div>
 				<div id="header_leftside">
 					<input type="text" id="input_search_wall" placeholder="buscar otro canal">
 					<a id="logout_button">Cerrar sesión</a>
 				</div>
 			</div>
 
-			<!--- Left side bar ---->
+			<!--- Left side bar -->
 			<div id="left_sidebar">
 				<p id="username">User name</p>
 				<div id="profile_picture_space">
@@ -63,13 +74,13 @@
 				</div> 
 			</div>
 
-			<!--- User messages wall ---->
+			<!--- User messages wall -->
 			<div id="user_wall"></div>
 
-			<!--- Right side bar ---->
+			<!--- Right side bar -->
 			<div id="right_sidebar"></div>
 
-			<!--- Footer ---->
+			<!--- Footer -->
 			<div id="footer"></div>
 
 		</div>

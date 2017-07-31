@@ -1,12 +1,19 @@
-#splash_background{
+#splash_login{
+	z-index: 100;
+}
+
+#splash_request_wall_url{
+	z-index: 95;
+}
+
+.splash_background{
   position: absolute;
   background: #F6FAFF;
   width: 100%;
   height: 100%;
-  z-index: 9999;
 }
 
-#splash_title{
+.splash_title{
   color:#4A4A4A;
   text-align:center;
   font-size:40px;
@@ -15,17 +22,17 @@
   font-family: "Open Sans";
 }
 
-#splash_subtitle{
+.splash_subtitle{
   color:#4A4A4A;
   text-align:center;
-  font-size:20fhpx;
+  font-size:20px;
   margin:0 auto;
   display:block;
   font-family: "Open Sans";
   padding-bottom: 20px;
 }
 
-#splash_fb_button{
+.splash_fb_button{
   display: block;
   font-family: "Open Sans", sans-serif;
   outline: 0;
@@ -41,7 +48,31 @@
   cursor: pointer;
 }
 
-#splash_footer{
+.splash_fb_button:hover{
+  background: #FFCA2A;
+}
+
+.splash_send_button{
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  outline: 0;
+  background: #4A90E2;
+  width: 100px;
+  border: 0;
+  margin: 20px auto;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.splash_send_button:hover{
+  background: #FFCA2A;
+}
+
+.splash_footer{
   color: black;
   font-size: 11px;
   font-family: "Open Sans";
@@ -53,22 +84,56 @@
   text-align: center;
 }
 
-#splash_fireandice_icon{
+.splash_fireandice_icon{
   padding-top: 140px;
   width: 50px;
   margin: 0 auto;
 }
 
 
-#splash_img {
+.splash_img {
     display: inline-block;
     text-align: center;
     width:50px; /* you can use % */
     height: auto;
 }
 
+.splash_error_message {
+  color:red;
+  text-align:center;
+  font-size:14px;
+  margin:0 auto;
+  display:block;
+  font-family: "Open Sans";
+  padding-bottom: 20px;
+}
+
+
+#splash_input_create_wall_url{
+	position: relative;
+	text-align: center;
+	display: block;
+	padding: 0;
+	border: 0;
+	height: 18px;
+	width: 250px;
+	margin: 0 auto;
+  	padding: 20px;
+  	color: black;
+  	font-size: 14px;
+  	box-shadow: 2px 2px 5px #888;
+}
+
+
+#splash_input_create_wall_url:focus{
+	box-shadow: 0;
+	outline: 0;
+}
+
+
 #main_page{
 	top:0;
+	height: 100%;
 }
 
 html,body{
@@ -86,18 +151,18 @@ body{
 	padding: 15px;
 	top: 0;
 	width: 100%;
-	background: #0288D1;
+	background: #4A4A4A;
 	min-width: 900px;
 	height: 40px;
 }
 
-h2{
+#header_title{
 	margin: 0 3%; 
 	display: inline-block;
 	float: left;
 	font-size: 30px;
 	font-family: "Open Sans";
-	color: #FFCA2A;
+	color: white;
 }
 
 #header_leftside{
@@ -130,6 +195,7 @@ h2{
 
 
 #left_sidebar{
+	position: relative;
 	display: block;
 	background: #C3C3C3;
 	width: 20%;
