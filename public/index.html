@@ -33,7 +33,10 @@
 
 	 		<!--- Header -->
 			<div id="header">
-				<div id="header_title">¡Zúmbate!</div>
+				<div id="header_rightside">
+					<div id="header_title">¡Zúmbate!</div>
+					<div class="splash_fireandice_icon" id="header_image_div"><img class="splash_img" id="header_image" src="img/fireandice.gif"></div>
+				</div>
 				<div id="header_leftside">
 					<input type="text" id="input_search_wall" placeholder="buscar otro canal">
 					<a id="logout_button">Cerrar sesión</a>
@@ -44,12 +47,12 @@
 			<div id="left_sidebar">
 				<p id="username">User name</p>
 				<div id="profile_picture_space">
-					<img id="profile_picture" src="img/profile_picture_template.png">
+					<img id="profile_picture_to_display" src="img/profile_picture_template.png">
 				</div>
 				<div id="score">
-					<p id="seguidores">seguidores</p>
-					<p id="frios">fríos</p>
-					<p id="fuegos">fuegos</p>
+					<p id="wall_followers_counter_to_display">seguidores</p>
+					<p id="wall_ice_received_counter_to_display">fríos</p>
+					<p id="wall_fire_received_counter_to_display">fuegos</p>
 				</div>
 				<div id="following">
 					<p>Siguiendo a...</p>
@@ -74,15 +77,19 @@
 				</div> 
 			</div>
 
-			<!--- User messages wall -->
-			<div id="user_wall"></div>
+			<!--- Wall content -->
+			<div id="wall_content">
+				
+			</div>
 
 			<!--- Right side bar -->
-			<div id="right_sidebar"></div>
-
-			<!--- Footer -->
-			<div id="footer"></div>
-
+			<div id="right_sidebar">
+				<p class="wall_instructions" id="send_message_instructions">¡Deja un mensaje<br>totalmente anónimo!<br>¿Eres fuego o hielo?</p>
+				<input type="text" id="message_form" class="message_form" placeholder="Ingrese su mensaje.">
+				<button class="splash_send_button" id="message_send_button">Enviar</button>
+				<p class="wall_instructions" id="follow_instructions">No te pierdas de nada de <br>lo que ocurre en este muro. </p>
+				<button class="splash_send_button" id="message_send_button">Enviar</button>
+			</div>
 		</div>
 
 	</body>

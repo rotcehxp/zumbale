@@ -11,6 +11,10 @@
   background: #F6FAFF;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .splash_title{
@@ -136,24 +140,34 @@
 	height: 100%;
 }
 
+
 html,body{
-	height: 100%
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	min-width: 900px;
+
+
 }
+
 
 body{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	display: block;
+	background: white;
 }
 #header{
 	display: block;
 	padding: 15px;
 	top: 0;
-	width: 100%;
 	background: #4A4A4A;
 	min-width: 900px;
 	height: 40px;
+	box-shadow: 1px 1px 16px #888;
+	z-index: 10000;
 }
 
 #header_title{
@@ -173,9 +187,26 @@ body{
 
 }
 
+#header_image_div{
+	padding: 0;
+	display: inline-block;
+}
+#header_rightside{
+	display: inline-block;
+	padding: 0;
+	width: 400px;
+}
+
+#header_image{
+	display: inline-block;
+	padding-top: 6px;
+	height: 30px;
+	width: auto;
+}
+
 #header input{
 	display: block;
-	padding: 0;
+	padding-left: 10px;
 	border: 0;
 	margin-right: 10%;
 	height: 30px;
@@ -184,7 +215,7 @@ body{
 
 #logout_button{
 	margin-top: 5px;
-	margin-right: 10%;
+	margin-right: 8%;
 	float: right;
 	font-size: 12px;
 	display: block;
@@ -193,24 +224,78 @@ body{
 	cursor: pointer;
 }
 
+#logout_button:hover{
+	color: #FFCA2A;
+}
 
 #left_sidebar{
+	display: inline-block;
 	position: relative;
-	display: block;
-	background: #C3C3C3;
-	width: 20%;
-	height: 100%;
+	background: #ECECEC;
+	width: 150px;
 	margin: 0;
 	padding: 0;
 	border: 0;
+	height: 100%;
 	font-family: "Open Sans";
 	min-width: 250px;
+	box-shadow: 1px 1px 16px #888;
+	z-index: -999;
+
+}
+
+#wall_content{
+	display: inline-block;
+	position: fixed;
+	min-width: 600px;
+	background: white;
+	height: 100%;
+	z-index: -9999;
+	left: 25%;
+	float: center;
+}
+
+
+#right_sidebar{
+	display: inline-block;
+	z-index: -999;
+	position: relative;
+	background: #ECECEC;
+	width: 150px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 100%;
+	font-family: "Open Sans";
+	min-width: 250px;
+	box-shadow: 1px 1px 16px #888;
+	float: right;
 }
 
 p{
 	margin: 0;
 	color: #4A4A4A;
 	font-size: 14px;
+	width: 100%;
+}
+
+.wall_instructions{
+	padding-top: 40px;
+	text-align: center;
+}
+
+.message_form{
+	display: block;
+	text-align: center;
+	border: 0;
+	height: 150px;
+	width: 200px;
+
+	margin: 20px auto;
+  	color: black;
+  	font-size: 12px;
+  	box-shadow: 2px 2px 5px #888;
+  	padding: 15px;
 }
 
 #username{
@@ -220,20 +305,24 @@ p{
 	top: 35px;
 }
 
-#profile_picture{
+#profile_picture_to_display{
 	position: relative;
 	top: 50px;
 	display: block;
-	width: 120px;
-	height: auto;
+	width: auto;
+	height: 100px;
 	margin: 0 auto;
 	text-align: center;
+	outline: 2px;
+	outline-color: black;
+
 }
 
 #score{
-	padding: 0 40%;
+	padding: 0 35%;
 	position: relative;
 	top: 75px;
+	width: 100%;
 }
 
 #following{
@@ -241,9 +330,15 @@ p{
 	position: relative;
 	display: block;
 	top:145px;
+
 }
 
-
+input[type="text"]
+{
+    font-size:14px;
+    font-family: "Open Sans";
+    text-align: justify;
+}
 
 
 #following_profile_pictures_table{
@@ -263,7 +358,6 @@ p{
 ::-webkit-input-placeholder { /* WebKit browsers */
 
     position: relative;
-    left: 10px;
     position:0 0;
     height: 100px;
     width:400px;
@@ -272,7 +366,6 @@ p{
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 
     position: relative;
-    left: 10px;
     position:0 0;
     height: 100px;
     width:400px;
@@ -281,7 +374,6 @@ p{
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
 
     position: relative;
-    left: 10px;
     position:0 0;
     height: 100px;
     width:400px;
@@ -290,7 +382,6 @@ p{
 :-ms-input-placeholder { /* Internet Explorer 10+ */
 
     position: relative;
-    left: 10px;
     position:0 0;
     height: 100px;
     width:400px;
