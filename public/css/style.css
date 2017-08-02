@@ -138,6 +138,9 @@
 #main_page{
 	top:0;
 	height: 100%;
+	text-align: center;
+
+
 }
 
 
@@ -146,7 +149,9 @@ html,body{
 	width: 100%;
 	top: 0;
 	left: 0;
-	min-width: 900px;
+	min-width: 1120px;
+	max-width: 1500px;
+	font-family: "Open Sans";
 
 
 }
@@ -157,9 +162,12 @@ body{
 	padding: 0;
 	border: 0;
 	display: block;
-	background: white;
+	background: #F6FAFF;
+	overflow: hidden;
 }
+
 #header{
+	text-align: justify;
 	display: block;
 	padding: 15px;
 	top: 0;
@@ -168,6 +176,135 @@ body{
 	height: 40px;
 	box-shadow: 1px 1px 16px #888;
 	z-index: 10000;
+}
+
+
+.sidebar{
+	display: inline-block;
+	background: #ECECEC;
+	height: 100%;
+	font-family: "Open Sans";
+	width: 250px;
+	z-index: -999;
+	text-align: justify;
+}
+
+#right_sidebar{
+		float: right;
+		box-shadow: -1px 1px 4px #888;
+		z-index: -9999;
+
+
+}
+
+#left_sidebar{
+		float: left;
+		box-shadow: 1px 1px 4px #888;
+		z-index: -9999;
+
+}
+
+#wall_content{
+	display: inline-block;
+	width: 560px;
+	text-align: center;
+	padding: 30px;
+	overflow-y: auto;
+    max-height: -webkit-calc(100% - 90px);
+    max-height: -moz-calc(100% - 90px);
+    max-height: calc(100% - 90px);
+
+}
+
+.message{
+	display: block;
+	width: 350px;
+	height: auto;
+	text-align: justify;
+	margin-bottom: 25px;
+    box-shadow: 1px 1px 3px #888;
+    font-size: 13px;
+    background-color: white;
+}
+
+.message_text{
+	width: 315px;
+	padding: 20px;
+}
+
+.message_menu{
+	border-top-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-width: 2px;
+    border-color: gray;
+	background-color: white;
+	height: 40px;
+}
+
+.message_menu .fire_message{
+    border-color: #F5A623;
+
+}
+
+.message_menu .ice_message{
+    border-color: #039BE5;
+
+}
+
+.message_fireandice_icon{
+	float: left;
+
+}
+
+.message_fire_icon{
+	width: 28px;
+	height: auto;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+
+
+.message_ice_icon{
+	margin-left: 180px;
+	margin-top: 3px;
+	margin-right: 5px;
+	width: 34px;
+	height: auto;
+}
+
+.message_score{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 40px;
+	float: left;
+
+}
+
+.fire_message{
+	clear: both;
+	border-left: 3px solid orange;
+}
+
+
+.ice_message{
+	clear: both;
+	float: right;
+	margin-left: 110px;
+	color: white; 
+	border-right: 3px solid #88CDFF;
+}
+
+.neutral_message{
+	clear: both;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: gray;
 }
 
 #header_title{
@@ -228,49 +365,7 @@ body{
 	color: #FFCA2A;
 }
 
-#left_sidebar{
-	display: inline-block;
-	position: relative;
-	background: #ECECEC;
-	width: 150px;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	height: 100%;
-	font-family: "Open Sans";
-	min-width: 250px;
-	box-shadow: 1px 1px 16px #888;
-	z-index: -999;
 
-}
-
-#wall_content{
-	display: inline-block;
-	position: fixed;
-	min-width: 600px;
-	background: white;
-	height: 100%;
-	z-index: -9999;
-	left: 25%;
-	float: center;
-}
-
-
-#right_sidebar{
-	display: inline-block;
-	z-index: -999;
-	position: relative;
-	background: #ECECEC;
-	width: 150px;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	height: 100%;
-	font-family: "Open Sans";
-	min-width: 250px;
-	box-shadow: 1px 1px 16px #888;
-	float: right;
-}
 
 p{
 	margin: 0;
@@ -282,20 +377,26 @@ p{
 .wall_instructions{
 	padding-top: 40px;
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 .message_form{
-	display: block;
+	position: relative;
 	text-align: center;
 	border: 0;
 	height: 150px;
-	width: 200px;
-
-	margin: 20px auto;
+	width: 150px;
+	margin: 0px 35px;
   	color: black;
   	font-size: 12px;
   	box-shadow: 2px 2px 5px #888;
   	padding: 15px;
+  	overflow: hidden;
+}
+
+#follow_instructions{
+	position: relative;
+
 }
 
 #username{
@@ -309,9 +410,9 @@ p{
 	position: relative;
 	top: 50px;
 	display: block;
+	margin: 0 auto;
 	width: auto;
 	height: 100px;
-	margin: 0 auto;
 	text-align: center;
 	outline: 2px;
 	outline-color: black;
@@ -333,12 +434,11 @@ p{
 
 }
 
-input[type="text"]
-{
+input[type="text"]{
     font-size:14px;
     font-family: "Open Sans";
-    text-align: justify;
 }
+
 
 
 #following_profile_pictures_table{
@@ -387,3 +487,4 @@ input[type="text"]
     width:400px;
     font-size: 15px;
 }
+
