@@ -231,6 +231,8 @@ body{
 .message_text{
 	width: 315px;
 	padding: 20px;
+	text-align: left;
+	word-wrap:break-word;
 }
 
 .message_menu{
@@ -435,9 +437,13 @@ p{
 
 }
 
-input[type="text"]{
-    font-size:14px;
-    font-family: "Open Sans";
+
+#message_form{
+    padding: 20px;
+    text-align: left;
+    font-style: "Open Sans";
+    font-size: 14px;
+    color: #4A4A4A;
 }
 
 
@@ -456,12 +462,13 @@ input[type="text"]{
 	padding:5px;
 }
 
+
 ::-webkit-input-placeholder { /* WebKit browsers */
 
     position: relative;
     position:0 0;
     height: 100px;
-    width:400px;
+    width:60%;
     font-size: 15px;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
@@ -469,7 +476,7 @@ input[type="text"]{
     position: relative;
     position:0 0;
     height: 100px;
-    width:400px;
+    width:60%;
     font-size: 15px;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
@@ -477,7 +484,7 @@ input[type="text"]{
     position: relative;
     position:0 0;
     height: 100px;
-    width:400px;
+    width:60%;
     font-size: 15px;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
@@ -485,7 +492,7 @@ input[type="text"]{
     position: relative;
     position:0 0;
     height: 100px;
-    width:400px;
+    width:60%;
     font-size: 15px;
 }
 
