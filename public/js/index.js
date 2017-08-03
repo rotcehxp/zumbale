@@ -103,7 +103,7 @@ $("#input_search_wall").on('keyup', function (e) {
     		if(wall_url_reference.val()!= null){
     			console.log("HERE B3");
     			var user_loggedin = firebase.auth().currentUser;
-    			firebase.database().ref('users/'+user_loggedin.uid).set({
+    			firebase.database().ref('users/'+user_loggedin.uid).update({
     				visiting_wall_url: wall_url
     			});
     			var user_reference=wall_url_reference.child("user_id").val();
@@ -150,6 +150,8 @@ function fillWallWithUserData(user){
     	$("#wall_fire_received_counter_to_display").replaceWith("<p id=wall_fire_received_counter_to_display>"+fire_received_counter_to_display+" fuegos</p>");
     	$("#profile_picture_to_display").replaceWith("<img id=profile_picture_to_display src="+user_profile_photo_url_to_display+">");
     
+    	$("#wall_content").replaceWith("<div id=wall_content> </div>");
+
     	displayWallMessages(wall_url_to_display);
     });
 
@@ -161,17 +163,23 @@ function fillWallWithOtherUserData(user){
 		fillWallWithUserData(user_loggedin);
 	}else{
 		firebase.database().ref('users/'+user.user_id).once('value', function(snapshot){
-    	var username_to_display = snapshot.child('username').val(),
-    	    followers_counter_to_display = snapshot.child('following_counter').val(),
-    		ice_received_counter_to_display = snapshot.child('ice_received_counter').val(),
-    		fire_received_counter_to_display = snapshot.child('fire_received_counter').val(),
-    		 user_profile_photo_url_to_display = snapshot.child('profile_picture').val();
+	    	var username_to_display = snapshot.child('username').val(),
+	    	    followers_counter_to_display = snapshot.child('following_counter').val(),
+	    		ice_received_counter_to_display = snapshot.child('ice_received_counter').val(),
+	    		fire_received_counter_to_display = snapshot.child('fire_received_counter').val(),
+	    		user_profile_photo_url_to_display = snapshot.child('profile_picture').val(),
+	    		wall_url_to_display = snapshot.child('wall_url').val();
 
-    	$("#username").replaceWith("<p id=username>"+username_to_display+"</p>");
-    	$("#wall_followers_counter_to_display").replaceWith("<p id=wall_followers_counter_to_display>"+followers_counter_to_display+" seguidores</p>");
-    	$("#wall_ice_received_counter_to_display").replaceWith("<p id=wall_ice_received_counter_to_display>"+ice_received_counter_to_display+" fríos</p>");
-    	$("#wall_fire_received_counter_to_display").replaceWith("<p id=wall_fire_received_counter_to_display>"+fire_received_counter_to_display+" fuegos</p>");
-    	$("#profile_picture_to_display").replaceWith("<img id=profile_picture_to_display src="+user_profile_photo_url_to_display+">");
+	    	$("#username").replaceWith("<p id=username>"+username_to_display+"</p>");
+	    	$("#wall_followers_counter_to_display").replaceWith("<p id=wall_followers_counter_to_display>"+followers_counter_to_display+" seguidores</p>");
+	    	$("#wall_ice_received_counter_to_display").replaceWith("<p id=wall_ice_received_counter_to_display>"+ice_received_counter_to_display+" fríos</p>");
+	    	$("#wall_fire_received_counter_to_display").replaceWith("<p id=wall_fire_received_counter_to_display>"+fire_received_counter_to_display+" fuegos</p>");
+	    	$("#profile_picture_to_display").replaceWith("<img id=profile_picture_to_display src="+user_profile_photo_url_to_display+">");
+	    	
+	    	$("#wall_content").replaceWith("<div id=wall_content> </div>");
+
+	    	displayWallMessages(wall_url_to_display);
+
     	});
 	}
 }
