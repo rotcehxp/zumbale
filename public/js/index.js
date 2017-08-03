@@ -222,9 +222,10 @@ function postMessage(wall_url){
 		firebase.database().ref('messages/' + wall_url).update({
 			  				total_messages_counter: total_messages_counter+1
 		});
+
+		location.reload();
 	});
 
-	location.reload();
 
 }
 
